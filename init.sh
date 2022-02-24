@@ -1,4 +1,4 @@
-useradd teste;
+useradd -m teste;
 service start ssh;
 printf '1234\n1234\n' |passwd teste;
 printf 'y\n' | apt install ssh;
