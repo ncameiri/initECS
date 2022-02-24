@@ -8,6 +8,9 @@
 printf '123456789\n123456789\n'| adduser -g "teste" teste;
 apk add openssh;
 apk add sudo;
+apk add shadow;
+echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel;
+adduser teste wheel;
 sudo usermod -a -G sudo teste;
 ssh-keygen -A
 /usr/sbin/sshd
